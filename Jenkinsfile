@@ -5,7 +5,7 @@ pipeline {
          stage ('git clone') {
             steps {
         echo "code is building"
-         git 'https://github.com/venkat5658/data.git'
+         git 'https://github.com/Hasanathentic/new-dep-.git'
             }
         }
         
@@ -24,7 +24,7 @@ pipeline {
         stage('kubectl deploy'){ 
        steps
         {
-          sh 'sudo kubectl apply -f tomcat.yaml'
+          sh 'sudo kubectl apply -f httpd.yaml'
           sh 'sudo kubectl get nodes'
           sh 'sudo kubectl get svc'
           sh 'sudo kubectl get ns'
