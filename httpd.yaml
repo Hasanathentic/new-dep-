@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: httpd-container
-        image: 276448867345.dkr.ecr.ap-south-1.amazonaws.com/deploy:latest
+        image: public.ecr.aws/c9e0d4u8/httpd
         ports:
         - containerPort: 8080
        
