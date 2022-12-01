@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: httpd-container
-        image: public.ecr.aws/c9e0d4u8/httpd
+        image: public.ecr.aws/c9e0d4u8/httpd:latest
         ports:
         - containerPort: 8080
        
