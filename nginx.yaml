@@ -18,7 +18,6 @@ spec:
       containers:
       - name: nginx-container
         image: public.ecr.aws/c9e0d4u8/nginx:latest
-        imagePullPolicy: Always
         ports:
         - containerPort: 8080
          
