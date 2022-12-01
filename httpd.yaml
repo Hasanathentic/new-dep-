@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: httpd-deployment
+  name: nginx-deployment
   labels:
-    app: httpd
+    app: nginx
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: httpd
+      app: nginx
   replicas: 2
   template:
     metadata:
       labels:
-        app: httpd
+        app: nginx
     spec:
       containers:
-      - name: httpd-container
+      - name: nginx-container
         image: public.ecr.aws/c9e0d4u8/httpds
         ports:
         - containerPort: 8080
@@ -25,11 +25,11 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: httpd-service
+  name: nginx-service
 spec:
   type: LoadBalancer
   selector:
-    app: httpd
+    app: nginx
   ports:
   - name: http
     protocol: TCP
@@ -40,7 +40,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   namespace: 
-  name: ingress-httpd
+  name: ingress-nginx
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
@@ -53,6 +53,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: httpd-service
+              name: nginx-service
               port:
                 number: 8080
