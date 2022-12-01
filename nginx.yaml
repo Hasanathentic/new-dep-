@@ -18,9 +18,10 @@ spec:
       containers:
       - name: nginx-container
         image: public.ecr.aws/c9e0d4u8/httpds
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
-         imagePullPolicy: Always
+         
        
 ---
 kind: Service
