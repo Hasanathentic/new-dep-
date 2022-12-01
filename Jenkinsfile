@@ -14,7 +14,7 @@ pipeline {
                 echo "buid docker image"
                 
                 sh 'docker build -t public.ecr.aws/c9e0d4u8/nginix .'
-                sh 'sudo docker tag nginix:latest public.ecr.aws/c9e0d4u8/nginix:latest'
+                sh 'sudo docker tag public.ecr.aws/c9e0d4u8/nginix '
                 sh 'sudo docker push public.ecr.aws/c9e0d4u8/nginix:latest '
                
             }
