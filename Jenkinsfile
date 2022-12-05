@@ -13,9 +13,9 @@ pipeline {
             steps {
                 echo "buid docker image"
                 
-                sh 'docker build -t public.ecr.aws/c9e0d4u8/nginx .'
-                sh 'sudo  docker tag nginx:latest public.ecr.aws/c9e0d4u8/nginx:latest'
-                sh 'sudo docker push public.ecr.aws/c9e0d4u8/nginx:latest '
+                sh 'docker build -t 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginix .'
+                sh 'sudo  docker tag nginix:latest 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginix:latest'
+                sh 'docker push 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginix:latest '
                
             }
         }
