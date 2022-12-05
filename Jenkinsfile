@@ -12,10 +12,10 @@ pipeline {
         stage('build docker docker image') {
             steps {
                 echo "buid docker image"
-               
+                sh 'aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 276448867345.dkr.ecr.ap-south-1.amazonaws.com'
                 sh 'sudo docker build -t 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginix .'
-                sh 'sudo docker tag nginix:latest 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginix:latest'
-                sh 'sudo docker push 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginix:latest '
+                sh 'sudo docker tag e9ae3c220b23 276448867345.dkr.ecr.region.amazonaws.com/nginx:latest'
+                sh 'sudo docker push 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginx:latest '
                
             }
         }
