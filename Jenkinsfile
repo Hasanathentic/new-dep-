@@ -12,10 +12,10 @@ pipeline {
         stage('build docker docker image') {
             steps {
                 echo "buid docker image"
-                
-                sh 'docker build -t 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginix .'
-                sh 'sudo  docker tag nginix:latest 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginix:latest'
-                sh 'docker push 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginix:latest '
+               
+                sh 'sudo docker build -t 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginix .'
+                sh 'sudo docker tag nginix:latest 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginix:latest'
+                sh 'sudo docker push 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginix:latest '
                
             }
         }
