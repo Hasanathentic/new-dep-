@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx-container
-        image: public.ecr.aws/c9e0d4u8/nginx:latest
+        image: 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginx
         ports:
         - containerPort: 8083
        
