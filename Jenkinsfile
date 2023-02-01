@@ -9,7 +9,7 @@ pipeline {
             }
         }
         
-        stage('build docker docker image') {
+        stage('build docker image') {
             steps {
                 echo "build docker image"
                 sh 'sudo aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/t9i9j9a8'
