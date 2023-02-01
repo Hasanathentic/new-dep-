@@ -14,8 +14,8 @@ pipeline {
                 echo "buid docker image"
                 sh 'aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 276448867345.dkr.ecr.ap-south-1.amazonaws.com'
                 sh 'sudo docker build -t nginx .'
-                sh 'sudo docker tag nginx:latest 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginx:1.23'
-                sh 'sudo docker push 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginx:1.23'
+                sh 'sudo docker tag nginx:latest 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginx:1.22'
+                sh 'sudo docker push 276448867345.dkr.ecr.ap-south-1.amazonaws.com/nginx:1.22'
                
             }
         }
