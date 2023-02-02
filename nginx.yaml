@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: nginx-container
-        image: public.ecr.aws/t9i9j9a8/nginx:1.22
+        image: public.ecr.aws/t9i9j9a8/nginx:latest
         ports:
         - containerPort: 8080
        
@@ -41,8 +41,8 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  namespace: hello
   name: ingress-nginx
+  namespace: hello
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
