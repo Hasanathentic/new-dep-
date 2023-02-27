@@ -1,5 +1,4 @@
 FROM nginx
-Add ./nginx/* /usr/local/mginx/htdocs
-EXPOSE 8080
-CMD ["nginx"]
+Add ./nodejs/* /usr/local/mginx/htdocs
+EXPOSE 3000
 WORKDIR /usr/local/nginx/htdocs/
