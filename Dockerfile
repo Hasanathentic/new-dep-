@@ -1,6 +1,5 @@
 FROM nginx
-WORKDIR /usr/local/nginx/htdocs/
-ENV PATH=/usr/local/nginx/htdocs:$PATH
-COPY . /usr/local/nginx/htdocs/
+Add ./nginx/* /usr/local/mginx/htdocs
 EXPOSE 8080
 CMD ["nginx"]
+WORKDIR /usr/local/nginx/htdocs/
